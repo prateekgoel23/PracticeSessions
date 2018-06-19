@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+	<DTSConfigurationHeading>
+		<DTSConfigurationFileInfo GeneratedBy="BRISTLECONE\Prateek.Goel" GeneratedFromPackageName="Excel to SqlTable" GeneratedFromPackageID="{9D87B7FE-3397-4B8F-AAFA-09E48955EFEE}" GeneratedDate="6/19/2018 2:47:59 PM"/>
+</DTSConfigurationHeading>
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::DB_Name].Properties[Value]" ValueType="String">
+	<ConfiguredValue>dbo.SuperMarket</ConfiguredValue>
+</Configuration>
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::ExcelFile_Connection].Properties[Value]" ValueType="String">
+	<ConfiguredValue>C:\Users\prateek.goel\Downloads\supermarketsnew.csv</ConfiguredValue>
+</Configuration>
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::Log_filePath].Properties[Value]" ValueType="String">
+	<ConfiguredValue>C:\Users\prateek.goel\Documents\Visual Studio 2015\Projects\Excel to SQLTable\LogFile.txt</ConfiguredValue>
+</Configuration>
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::Work_connection].Properties[Value]" ValueType="String">
+	<ConfiguredValue>Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Work;Provider=SQLNCLI11;Persist Security Info=False;Auto Translate=True;Integrated Security = SSPI;</ConfiguredValue>
+</Configuration>
+</DTSConfiguration>
