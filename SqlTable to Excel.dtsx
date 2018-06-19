@@ -1,0 +1,1051 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/15/2018 11:09:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PUN-DHTQJC2"
+  DTS:CreatorName="BRISTLECONE\Prateek.Goel"
+  DTS:DTSID="{53AB4C02-1036-4839-9131-E7AB0D6DCB7F}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="SqlTable to Excel"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{4A94169B-2877-4F2B-BFB2-24CB7C109D48}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LogFile.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{9D080659-7B89-47D5-824B-4CECA0316015}"
+      DTS:ObjectName="LogFile.txt">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::Log_filePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\prateek.goel\Documents\Visual Studio 2015\Projects\Excel to SQLTable\LogFile.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SuperMarket]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="SuperMarket"
+      DTS:DTSID="{1A63947E-6473-4334-AD65-74E42DAB988D}"
+      DTS:ObjectName="SuperMarket">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::ExcelFile_Connection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\prateek.goel\Downloads\supermarketsnew.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FacilityName"
+              DTS:DTSID="{1BFF25C3-D2AA-4477-BAB5-FC7257ADE110}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreeetNo"
+              DTS:DTSID="{94EFF773-FF09-4407-8244-17904D9A5301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreetName_Suffix"
+              DTS:DTSID="{90505742-E2EB-4583-B697-ABCC3EE9BEB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreetDirection"
+              DTS:DTSID="{CAEF7DB5-3C46-48F3-8AEA-B310534DA52A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitNumber"
+              DTS:DTSID="{3AA42EDB-069E-4E7A-8914-2583CF62F7EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Municipality"
+              DTS:DTSID="{3EA6C7CB-D9C8-4993-AA31-B8C2FAD9112B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Telephone"
+              DTS:DTSID="{12DC421F-7DE2-4B20-ACB9-475E96CC8E57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fax"
+              DTS:DTSID="{4018499B-007C-4984-AC96-994ED811A7F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LONGITUDE"
+              DTS:DTSID="{E875514C-1DFD-44EA-8803-FF3C02AFAC85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LATITUDE"
+              DTS:DTSID="{CEC399B0-4174-41C7-9C2C-6220AC3CD063}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Work]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{833AF9B2-4485-48E8-A105-D072AC5591BC}"
+      DTS:ObjectName="Work">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::Work_connection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Work;Provider=SQLNCLI11;Persist Security Info=False;Auto Translate=True;Integrated Security = SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="Work"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{B14EFBFC-61A2-42E4-AC53-28593E24BE1D}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+    <DTS:LogProvider
+      DTS:ConfigString="LogFile.txt"
+      DTS:CreationName="Microsoft.LogProviderTextFile"
+      DTS:Description="Writes log entries for events to a CSV file"
+      DTS:DTSID="{00691DA4-A7BF-4960-B694-645F74EEE21E}"
+      DTS:ObjectName="SSIS log provider for Text files">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9B9AA0A9-38C1-4C85-B769-00A5EAFC3F32}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DB_Name">
+      <DTS:VariableValue
+        DTS:DataType="8">dbo.SuperMarket</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2BF2B681-4EF8-40F3-A94A-F4AA7347230C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;C:\\Users\\prateek.goel\\Downloads\\supermarketsnew.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExcelFile_Connection">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prateek.goel\Downloads\supermarketsnew.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2B4C6A7C-5610-4099-8519-D1E2506F9B6E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Log_filePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prateek.goel\Documents\Visual Studio 2015\Projects\Excel to SQLTable\LogFile.txt</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{50D78272-A43D-4736-A66F-814AF9C143FA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;;with CTE AS&#xA;(&#xA;select ROW_NUMBER() over (partition by FacilityName,StreeetNo,StreetName_Suffix,StreetDirection,UnitNumber,Municipality,Telephone,Fax,LONGITUDE,LATITUDE &#xA;ORDER BY FacilityName,StreeetNo,StreetName_Suffix,StreetDirection,UnitNumber,Municipality,Telephone,Fax,LONGITUDE,LATITUDE )  Row_Count&#xA;from &quot;+ @[User::DB_Name] +&quot;&#xA;)&#xA;Delete from CTE &#xA;where Row_Count&gt;1&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Remove_duplicates">
+      <DTS:VariableValue
+        DTS:DataType="8">
+;with CTE AS
+(
+select ROW_NUMBER() over (partition by FacilityName,StreeetNo,StreetName_Suffix,StreetDirection,UnitNumber,Municipality,Telephone,Fax,LONGITUDE,LATITUDE 
+ORDER BY FacilityName,StreeetNo,StreetName_Suffix,StreetDirection,UnitNumber,Municipality,Telephone,Fax,LONGITUDE,LATITUDE )  Row_Count
+from dbo.SuperMarket
+)
+Delete from CTE 
+where Row_Count&gt;1
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1265511B-47DB-4B92-AF66-0EC69FF62F0E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Work_connection">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Work;Provider=SQLNCLI11;Persist Security Info=False;Auto Translate=True;Integrated Security = SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">10,7,OnError,19,OnExecStatusChanged,13,OnInformation,13,OnPostExecute,14,OnPostValidate,12,OnPreExecute,13,OnPreValidate,13,OnQueryCancel,12,OnTaskFailed,9,OnWarning</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnExecStatusChanged"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnQueryCancel"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnWarning"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{00691DA4-A7BF-4960-B694-645F74EEE21E}" />
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{B14EFBFC-61A2-42E4-AC53-28593E24BE1D}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DB table to Excel file"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{11759F18-3A26-4177-85EC-73362F454548}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DB table to Excel file"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DB table to Excel file\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DB table to Excel file\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SuperMarket]"
+                  connectionManagerRefId="Package.ConnectionManagers[SuperMarket]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[FacilityName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FacilityName"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FacilityName]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[FacilityName]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[StreeetNo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreeetNo"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreeetNo]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreeetNo]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[StreetName_Suffix]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetName_Suffix"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreetName_Suffix]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetName_Suffix]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[StreetDirection]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetDirection"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreetDirection]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetDirection]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[UnitNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitNumber"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UnitNumber]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[UnitNumber]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Municipality]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Municipality"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Municipality]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Municipality]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Telephone]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Telephone"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Telephone]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Telephone]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Fax]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Fax]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[LONGITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LONGITUDE"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LONGITUDE]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LONGITUDE]" />
+                    <inputColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[LATITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LATITUDE"
+                      externalMetadataColumnId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LATITUDE]"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LATITUDE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FacilityName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FacilityName" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreeetNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreeetNo" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreetName_Suffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetName_Suffix" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StreetDirection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetDirection" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UnitNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Municipality]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Municipality" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Telephone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Telephone" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LONGITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LONGITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LATITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LATITUDE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DB table to Excel file\Sql source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Sql source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SuperMarket]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DB table to Excel file\Sql source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Work]"
+                  connectionManagerRefId="Package.ConnectionManagers[Work]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[FacilityName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[FacilityName]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[FacilityName]"
+                      name="FacilityName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreeetNo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreeetNo]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreeetNo]"
+                      name="StreeetNo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetName_Suffix]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreetName_Suffix]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetName_Suffix]"
+                      name="StreetName_Suffix"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetDirection]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreetDirection]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[StreetDirection]"
+                      name="StreetDirection"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[UnitNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[UnitNumber]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[UnitNumber]"
+                      name="UnitNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Municipality]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Municipality]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Municipality]"
+                      name="Municipality"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Telephone]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Telephone]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Telephone]"
+                      name="Telephone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Fax]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
+                      name="LONGITUDE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LATITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].Columns[LATITUDE]"
+                      name="LATITUDE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[FacilityName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FacilityName" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreeetNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreeetNo" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreetName_Suffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetName_Suffix" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[StreetDirection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetDirection" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[UnitNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Municipality]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Municipality" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Telephone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Telephone" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LONGITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LATITUDE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[FacilityName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[FacilityName]"
+                      name="FacilityName" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreeetNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreeetNo]"
+                      name="StreeetNo" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreetName_Suffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreetName_Suffix]"
+                      name="StreetName_Suffix" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreetDirection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[StreetDirection]"
+                      name="StreetDirection" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[UnitNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[UnitNumber]"
+                      name="UnitNumber" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Municipality]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Municipality]"
+                      name="Municipality" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Telephone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Telephone]"
+                      name="Telephone" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
+                      name="LONGITUDE" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
+                      name="LATITUDE" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DB table to Excel file.Paths[OLE DB Source Output]"
+              endId="Package\DB table to Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DB table to Excel file\Sql source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DB table to Excel file"
+          TopLeft="17.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DB table to Excel file">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\DB table to Excel file\Sql source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DB table to Excel file\Flat File Destination"
+          TopLeft="46.5,102.5" />
+        <EdgeLayout
+          Id="Package\DB table to Excel file.Paths[OLE DB Source Output]"
+          TopLeft="72,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.5,55"
+              Start="0,0"
+              End="63.5,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="59.5,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.5,27.5"
+                    Point2="63.5,27.5"
+                    Point3="63.5,31.5" />
+                  <mssgle:LineSegment
+                    End="63.5,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DB table to Excel file\Sql source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
