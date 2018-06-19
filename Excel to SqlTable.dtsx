@@ -12,8 +12,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Excel to SqlTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{5B8C24BD-D521-4F10-BFDE-47F713EEBC75}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{9A052168-A4E1-450E-A632-CDC108FBDE1A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -155,6 +155,14 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Users\prateek.goel\Documents\Visual Studio 2015\Projects\ConfigFile\Excel to sql table.dtsconfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{8D2E4342-FAD4-453B-B2CC-2F1661D39D59}"
+      DTS:ObjectName="Excel to SqlTable" />
+  </DTS:Configurations>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="Work"
